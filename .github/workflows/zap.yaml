@@ -1,0 +1,12 @@
+name: zap
+
+on: workflow_dispatch
+
+jobs:
+  go-go-zap:
+    runs-on: ubuntu-latest
+    steps:
+    - name: ZAP Scan
+      uses: zaproxy/action-baseline@v0.12.0
+      with:
+        target: 'https://www.zaproxy.org'
